@@ -1,0 +1,115 @@
+
+<html>
+
+<head>
+
+    <title>Автозапчасти ГАЗ</title>
+
+    <link rel="stylesheet" href="secondary.css" />
+    <link rel="stylesheet" href="Triple.scss" />
+    <script src="Scripts.js"></script>
+
+    <style>   
+        /*КОНТЕЙНЕР КНОПОК*/
+        .button-container {
+        display: flex;  
+        text-align: center;
+        padding: 10px;
+        }
+
+        /*КОД КНОПКИ*/
+        .readmore {
+            width: 170px;
+            height: 70px;
+            font-weight: bold;
+            font-size: 20px;
+            font-family: "Josefin Sans", sans-serif;
+            background-color: #555555;
+            cursor: pointer;
+            box-shadow: 5px 5px 0 0;
+            transition: 0.3s;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 20px;
+            text-decoration: none;
+            color: #000;
+            position: relative;
+            margin: 0 10px;
+            overflow: hidden;
+        }
+
+        .readmore::after {
+            position: absolute;
+            content: "";
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to right, #FFF0F5, #F5F5F5);
+            opacity: 0;
+            transition: 0.3s;
+            z-index: -1;
+        }
+
+        .readmore:hover {
+            box-shadow: -5px -5px 0 0;
+            transform: scale(0.9);
+        }
+
+        .readmore:hover::after {
+            opacity: 1;
+        }
+
+    </style>
+
+</head>
+
+
+
+<body>
+    <div id="header">
+        <h1>Автозапчасти ГАЗ</h1>
+        <h2>Магазин автозапчастей и автотоваров в Раменском</h2>
+    </div>
+
+    <div id="leftside">
+        <h4>Контакты</h4>
+        <p>Телефон: +7 (499) 340-84-47</p>
+        <h4>Время работы:</h4>
+        <p>пн-пт 9:00-20:00</p>
+        <p>сб-вс 10:00-19:00</p>
+    </div>
+
+    <div id="rightside">
+        <h4>Наше местоположение:</h4>
+        <p>Московская обл.</p>
+        <p>Раменское</p>
+        <p>Транспортный пр-д</p>
+        <p>5б</p>
+    </div>
+
+    <div id="centside">
+        <h3>Продаем ЗАПЧАСТИ ГАЗ, ГАЗЕЛЬ.</h3>
+        <p>Новые. Оригинал, не оригинал. Большой ассортимент.</p>
+        <p>Аккумуляторы, масла, химия. Наличие на складе. Свой сервис.</p>
+        <p>Наши сотрудники являются настоящими экспертами в области подбора запчастей для автомобилей. Они готовы подобрать Вам запчасть в лучшем соотношении цена/качество.</p>
+        <p>///</p>
+        <p>///</p>
+        <p>///</p>
+        <p>///</p>
+        <p>///</p>
+        <p>///</p>
+        <p>///</p>
+        <div class="button-container">
+            <a href="#" class="readmore">Читать еще 1</a>
+            <a href="#" class="readmore">Читать еще 2</a>
+            <a href="#" class="readmore">Читать еще 3</a>
+        </div>
+    </div>
+    <div id="footer">
+        <h2>Ждем Вас в нашем магазине!</h2>
+    </div>
+
+</body>
+</html>
