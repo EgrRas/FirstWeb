@@ -7,14 +7,13 @@
 
     <link rel="stylesheet" href="secondary.css" />
     <link rel="stylesheet" href="Triple.scss" />
-    <script src="Scripts.js"></script>
-
     <style>   
         /*КОНТЕЙНЕР КНОПОК*/
         .button-container {
-        display: flex;  
-        text-align: center;
-        padding: 10px;
+            display: flex;
+            text-align: center;
+            justify-content: space-around;
+            padding: 10px;
         }
 
         /*КОД КНОПКИ*/
@@ -61,6 +60,39 @@
             opacity: 1;
         }
 
+        #centerwindow1 {
+            display: flex;
+            text-align: center;
+            padding: 10px;
+            justify-content: space-around;
+        }
+
+        #centermap {
+            margin-left: 5px;
+            margin-right: 5px;
+            margin-top: 10px;
+        }
+
+        .centered-block {
+            display: none;
+            position: fixed;
+            top: 25%;
+            font-family: "Josefin Sans", sans-serif;
+            margin-top: 10px;
+            margin-left: 19%;
+            margin-right: 20%;
+            padding-left: 10px;
+            padding-right: 10px;
+            background-color: #222222;
+            color: aliceblue;
+            width: 61%;
+            /*height: 50%;*/
+            left: 10px;
+            border: 1px solid blue;
+            border-radius: 10px;
+            z-index: 9999;
+        }
+
     </style>
 
 </head>
@@ -102,7 +134,7 @@
         <p>///</p>
         <p>///</p>
         <div class="button-container">
-            <a href="#" class="readmore">Читать еще 1</a>
+            <a href="#" class="readmore" onclick="openModal()">КАРТА</a>
             <a href="#" class="readmore">Читать еще 2</a>
             <a href="#" class="readmore">Читать еще 3</a>
         </div>
@@ -110,6 +142,20 @@
     <div id="footer">
         <h2>Ждем Вас в нашем магазине!</h2>
     </div>
-
+    <div class="centered-block" id="myModal">
+        <div id="centermap">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d376.38469701436077!2d38.26489208497168!3d55.57138708923147!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x414ac002a908a401%3A0x582218ef6b008ab9!2z0JDQstGC0L7RgtGA0LDQvdGB0LzQvtCx0LjQuw!5e0!3m2!1sru!2sde!4v1730486666727!5m2!1sru!2sde"
+                    width="100%"
+                    height="500px"
+                    style="border:0;" 
+                    loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+        </div>
+        <div id="centerwindow1">
+            <a href="#" class="readmore" onclick="closeModal()">Закрыть</a>
+        </div>
+    </div>
+    <script src="Scripts.js"></script>
 </body>
 </html>
